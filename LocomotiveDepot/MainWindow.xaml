@@ -1,0 +1,26 @@
+﻿<Window x:Class="LocomotiveDepot.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LocomotiveDepot"
+        mc:Ignorable="d" MinHeight="450" MinWidth="800"
+        Title="Депо" Height="450" Width="800" Icon="Worker.ico">
+<Grid Background="{StaticResource MainBackground}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu VerticalAlignment="Top" Background="{StaticResource HeaderBackground}">
+            <MenuItem Header="&#x1F477;Работники" Click="WorkerButton_Click"/>
+            <MenuItem Header="&#x1F64B;Бригадиры" Click="ChiefButton_Click"/>
+            <MenuItem Header="&#x1F686;Локомотивы" Click="LocomotiveButton_Click"/>
+            <MenuItem Header="&#x1F689;Депо" Click="DepotButton_Click"/>
+            <MenuItem Header="&#x1F528;Новая работа" Click="ServiceButton_Click"/>
+            <Separator/>
+            <MenuItem Header="&#x1F529;Бригады" Click="BrigadeButton_Click"/>
+            <MenuItem Header="&#x1F527;Работы" Click="ServiceListButton_Click"/>
+        </Menu>
+        <Frame Margin="5" Grid.Row="1" x:Name="MainFrame" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

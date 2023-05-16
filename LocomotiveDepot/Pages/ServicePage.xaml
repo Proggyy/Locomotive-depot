@@ -1,0 +1,57 @@
+﻿<Page x:Class="LocomotiveDepot.Pages.ServicePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LocomotiveDepot.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ServicePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Запись подробностей ремонта" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.ColumnSpan="2"/>
+        <StackPanel Grid.Row="1">
+            <TextBlock Text="Выберите локомотив"/>
+            <ComboBox x:Name="LocomotiveList"/>
+            <TextBlock Text="Выберите депо"/>
+            <ComboBox x:Name="DepotList"/>
+            <TextBlock Text="Выберите ответственного бригадира"/>
+            <ComboBox x:Name="BrigadeList"/>
+            <TextBlock Text="Начало ремонта"/>
+            <DatePicker x:Name="RepairStart"/>
+            <TextBlock Text="Окончание ремонта"/>
+            <DatePicker x:Name="RepairEnd"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <TextBlock Text="Тип ремонта"/>
+            <TextBox x:Name="RepairType"/>
+            <TextBlock Text="Стоимость ремонта"/>
+            <TextBox x:Name="RepairPrice"/>
+            <TextBlock Text="Причина ремонта"/>
+            <TextBox x:Name="RepairReason"/>
+            <CheckBox Content="Отличное качество" x:Name="Quality"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Процент премии "/>                
+                <TextBox Width="50" x:Name="BonusPercent"/>
+                <TextBlock Text=" %"/>
+            </StackPanel>
+            <TextBlock Text="Премия в рублях"/>
+            <TextBox x:Name="Bonus"/>
+            <TextBlock Text="Тип премии"/>
+            <TextBox x:Name="BonusType"/>
+            <TextBlock Text="Примечание премии"/>
+            <TextBox x:Name="Comment"/>
+        </StackPanel>
+        
+        <Button Grid.Row="2" Grid.Column="1" Content="Добавить" Click="Button_Click"/>
+    </Grid>
+</Page>
